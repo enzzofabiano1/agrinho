@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b3d1f; /* verde escuro */
+  color: white;
+  overflow: hidden;
+}
+
+/* texto principal */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.content {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+/* 🌳 árvores */
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  height: 120px;
+  background: #063b1a;
+  border-radius: 10px;
+}
+
+.tree::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 80px;
+  background: #0f6a2c;
+  border-radius: 50%;
+}
+
+/* posições das árvores */
+.tree1 { left: 50px; }
+.tree2 { left: 200px; height: 140px; }
+.tree3 { right: 80px; }
+
+/* ☁️ nuvens */
+.cloud {
+  position: absolute;
+  top: 40px;
+  width: 120px;
+  height: 60px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50px;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 70px;
+  height: 70px;
+  top: -20px;
+  left: 10px;
+}
+
+.cloud::after {
+  width: 60px;
+  height: 60px;
+  top: -10px;
+  right: 10px;
+}
+
+.cloud1 { left: 100px; }
+.cloud2 { right: 120px; top: 80px; }
